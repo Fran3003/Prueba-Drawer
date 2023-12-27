@@ -4,19 +4,19 @@ import { RootStackParams } from "../../types";
 // import { useNavigation } from "@react-navigation/native";
 import { StackScreenProps } from "@react-navigation/stack";
 
-type GaleryProps = StackScreenProps<RootStackParams, "Perfil">;
+type PerfilProps = StackScreenProps<RootStackParams, "Perfil">;
 
-const Galery: React.FC<GaleryProps> = ({ navigation }) => {
+const Perfil: React.FC<PerfilProps> = ({ navigation }) => {
   const goToSettings = () => {
     navigation.navigate("Settings");
   };
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: 'black' }}>
-      <Text style={{ fontSize: 20 }}>Galery!</Text>
+      <Text style={{ fontSize: 20 }}>Perfil!</Text>
       <Button title="Ir a Configuraciones" onPress={goToSettings} />
     </View>
   );
 };
 
-export default Galery;
+export default Perfil;
