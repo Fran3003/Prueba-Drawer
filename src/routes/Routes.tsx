@@ -7,6 +7,15 @@ import { RootStackParams } from "../types";
 import Home from "../views/Home";
 import Setting from "../views/Settings";
 import Perfil from "../views/Perfil";
+import Calendario from "../views/Calendario";
+import Camada from "../views/Camada";
+import Publicaciones from "../views/Publicaciones";
+import About from "../views/About";
+import NextGame from "../views/NextGame";
+import Evento from "../views/Evento";
+import Posts from "../views/Posts";
+import Newsletter from "../views/Newsletter";
+import Noticias from "../views/Noticias";
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -30,11 +39,25 @@ const MyTabs = () => {
         options={routesScreenDefaultOptions}
       />
       <Tab.Screen
+        name="Calendario"
+        component={Calendario}
+        options={routesScreenDefaultOptions}
+      />
+      <Tab.Screen
+        name="Camada"
+        component={Camada}
+        options={routesScreenDefaultOptions}
+      />
+      <Tab.Screen
+        name="Publicaciones"
+        component={Publicaciones}
+        options={routesScreenDefaultOptions}
+      />
+      <Tab.Screen
         name="Perfil"
         component={Perfil}
         options={routesScreenDefaultOptions}
       />
-      {/* Agrega más pestañas según sea necesario */}
     </Tab.Navigator>
   );
 };
@@ -44,7 +67,13 @@ const Routes = () => {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="MyTabs" component={MyTabs} />
+        <Drawer.Screen name="Next Game" component={NextGame} />
+        <Drawer.Screen name="Evento" component={Evento} />
+        <Drawer.Screen name="Posts" component={Posts} />
+        <Drawer.Screen name="Newsletter" component={Newsletter} />
+        <Drawer.Screen name="Noticias" component={Noticias} />
         <Drawer.Screen name="Settings" component={Setting} />
+        <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
